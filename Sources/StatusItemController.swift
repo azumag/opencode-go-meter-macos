@@ -239,7 +239,7 @@ final class StatusItemController: NSObject, NSMenuDelegate {
         guard let button = statusItem.button else { return }
         if let usage = lastUsage {
             let percent = usage.usage.monthly.percent
-            let title = "Go \(Formatters.percentString(percent, digits: 1))"
+            let title = "Go \(Formatters.percentString(percent))"
             button.attributedTitle = NSAttributedString(
                 string: title,
                 attributes: [.foregroundColor: colorForPercent(percent),
