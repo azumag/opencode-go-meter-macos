@@ -1,0 +1,12 @@
+# ビルド成果物
+build/
+dist/
+.build/
+*.app
+
+# macOS
+.DS_Store
+
+# ローカル設定（誤って置いた場合の保険。実際は ~/.config に保存される）
+config.json
+state.json
