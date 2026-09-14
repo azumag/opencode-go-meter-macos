@@ -114,7 +114,7 @@ enum Notifier {
         let thresholdText = Formatters.percentString(threshold)
         if threshold >= 100 {
             return ("OpenCode Go: \(windowLabel)リミットに到達しました",
-                    "無料モデルへ切り替わります")
+                    "上限到達後の動作はConsoleとクライアント設定を確認してください。Zen残高を使用する設定では課金が続く場合があります")
         }
         let remaining = max(0, 100 - percent)
         return ("OpenCode Go: \(windowLabel)リミットの \(thresholdText) に達しました",
@@ -132,6 +132,6 @@ enum Notifier {
             bandText = "\(bandHours)時間"
         }
         return ("OpenCode Go: 未使用枠リマインド",
-                "月次リセットまで \(bandText)。未使用が \(Formatters.percentString(unused, digits: 1)) 残っています。使い切りましょう")
+                "月次リセットまで \(bandText)。未使用が \(Formatters.percentString(unused, digits: 1)) 残っています。必要に応じて利用状況を確認してください")
     }
 }

@@ -1,4 +1,4 @@
-# ビルド成果物
+# Build output
 build/
 dist/
 .build/
@@ -7,6 +7,23 @@ dist/
 # macOS
 .DS_Store
 
-# ローカル設定（誤って置いた場合の保険。実際は ~/.config に保存される）
+# Local configuration and authentication data (at any depth)
 config.json
 state.json
+auth.json
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.mobileprovision
+*.log
+
+# Local secrets directories
+secrets/
+.credentials/
+
+# Ignore rules do not remove files already committed to Git history.
